@@ -1,132 +1,129 @@
-     1|<!DOCTYPE html>
-     2|<html lang="zh-CN">
-     3|<head>
-     4|<meta charset="UTF-8">
-     5|<meta name="viewport" content="width=device-width, initial-scale=1.0">
-     6|<title>AI原生组织重构 — 一页纸</title>
-     7|<style>
-     8|  * { margin: 0; padding: 0; box-sizing: border-box; }
-     9|  body { background: #060a10; display: flex; justify-content: center; align-items: center; min-height: 100vh; padding: 20px; }
-    10|  .page { width: 900px; min-height: 1280px; background: #0c1119; border: 1px solid rgba(255,255,255,0.06); border-radius: 4px; position: relative; overflow: hidden; }
-    11|
-    12|  .bg-glow { position: absolute; width: 500px; height: 500px; border-radius: 50%; filter: blur(120px); opacity: 0.15; }
-    13|  .bg-glow.g1 { top: -100px; left: -100px; background: #3b82f6; }
-    14|  .bg-glow.g2 { bottom: -150px; right: -100px; background: #8b5cf6; }
-    15|
-    16|  .header { padding: 56px 64px 36px; position: relative; z-index: 1; }
-    17|  .header .tag { font-size: 10px; letter-spacing: 4px; color: #60a5fa; text-transform: uppercase; margin-bottom: 16px; }
-    18|  .header h1 { font-size: 38px; font-weight: 900; color: #fff; line-height: 1.2; letter-spacing: 1px; }
-    19|  .header h1 em { font-style: normal; background: linear-gradient(135deg, #60a5fa, #a78bfa); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-    20|  .header .line { width: 48px; height: 3px; background: linear-gradient(90deg, #60a5fa, #a78bfa); margin-top: 20px; border-radius: 2px; }
-    21|
-    22|  .pillars { display: grid; grid-template-columns: 1fr 1fr; gap: 0; padding: 0 48px; position: relative; z-index: 1; }
-    23|  .pillar { padding: 32px 16px; border-top: 1px solid rgba(255,255,255,0.05); }
-    24|  .pillar:nth-child(odd) { border-right: 1px solid rgba(255,255,255,0.05); }
-    25|  .pillar .phead { display: flex; align-items: center; gap: 12px; margin-bottom: 20px; }
-    26|  .pillar .pnum { font-size: 13px; font-weight: 700; color: #fff; width: 28px; height: 28px; border-radius: 6px; display: flex; align-items: center; justify-content: center; }
-    27|  .pillar .pnum.n1 { background: #3b82f6; }
-    28|  .pillar .pnum.n2 { background: #8b5cf6; }
-    29|  .pillar .pnum.n3 { background: #10b981; }
-    30|  .pillar .pnum.n4 { background: #f59e0b; }
-    31|  .pillar h3 { font-size: 17px; font-weight: 700; color: #e6edf3; }
-    32|  .pillar .arrow { font-size: 12px; color: #484f58; margin-left: auto; }
-    33|  .pillar ul { list-style: none; }
-    34|  .pillar li { font-size: 13px; color: #8b949e; line-height: 1.8; padding-left: 16px; position: relative; }
-    35|  .pillar li::before { content: ''; position: absolute; left: 0; top: 10px; width: 4px; height: 4px; border-radius: 50%; }
-    36|  .pillar.p1 li::before { background: #3b82f6; }
-    37|  .pillar.p2 li::before { background: #8b5cf6; }
-    38|  .pillar.p3 li::before { background: #10b981; }
-    39|  .pillar.p4 li::before { background: #f59e0b; }
-    40|  .pillar li b { color: #c9d1d9; }
-    41|
-    42|  .highlight { margin: 0 48px; padding: 28px; background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.06); border-radius: 8px; position: relative; z-index: 1; }
-    43|  .highlight .hrow { display: flex; gap: 48px; }
-    44|  .highlight .hcol { flex: 1; }
-    45|  .highlight .hlabel { font-size: 10px; letter-spacing: 2px; color: #60a5fa; margin-bottom: 6px; text-transform: uppercase; }
-    46|  .highlight .hval { font-size: 14px; color: #c9d1d9; line-height: 1.6; }
-    47|  .highlight .hval b { color: #e6edf3; }
-    48|
-    49|  .footer { padding: 28px 64px 36px; text-align: center; position: relative; z-index: 1; }
-    50|  .footer .motto { font-size: 15px; color: #8b949e; font-style: italic; letter-spacing: 0.5px; }
-    51|  .footer .motto b { color: #fcd34d; font-style: normal; }
-    52|</style>
-    53|</head>
-    54|<body>
-    55|<div class="page">
-    56|  <div class="bg-glow g1"></div>
-    57|  <div class="bg-glow g2"></div>
-    58|
-    59|  <div class="header">
-    60|    <div class="tag">AI-NATIVE TRANSFORMATION</div>
-    61|    <h1><em>AI 原生组织</em><br>重构框架</h1>
-    62|    <div class="line"></div>
-    63|  </div>
-    64|
-    65|  <div class="pillars">
-    66|    <div class="pillar p1">
-    67|      <div class="phead"><span class="pnum n1">1</span><h3>组织形态重构</h3><span class="arrow">职能型 → 敏捷型</span></div>
-    68|      <ul>
-    69|        <li>组织<b>扁平化、敏捷化</b>，压缩层级，减少汇报拉通</li>
-    70|        <li>建立跨部门 <b>AI 场景小队</b>，业务提问、AI 赋能、合规前置</li>
-    71|        <li>建设公司级 <b>AI 能力平台</b>，统一沉淀模型、数据与 Agent</li>
-    72|        <li>岗位从「人做什么」→<b>「人机如何协同」</b></li>
-    73|        <li>配置专职 <b>AI 训练师（AIT）</b>，推动经验 Skill 化</li>
-    74|      </ul>
-    75|    </div>
-    76|
-    77|    <div class="pillar p2">
-    78|      <div class="phead"><span class="pnum n2">2</span><h3>业务流程重构</h3><span class="arrow">人工流转 → 智能驱动</span></div>
-    79|      <ul>
-    80|        <li><b>管理流程</b> AI 化 → 提升决策质量与风控</li>
-    81|        <li><b>业务流程</b> AI 化 → 增收、提效、规模化</li>
-    82|        <li><b>辅助流程</b> AI 化 → 降本、少人化、标准化</li>
-    83|        <li>知识传递：<b>「先调用再理解」</b>替代传统文档堆砌</li>
-    84|        <li>制度<b>标签化 + 封装为 Skill</b>，AI 即时调用</li>
-    85|      </ul>
-    86|    </div>
-    87|
-    88|    <div class="pillar p3">
-    89|      <div class="phead"><span class="pnum n3">3</span><h3>人才管理重构</h3><span class="arrow">专业人才 → AI 增强型</span></div>
-    90|      <ul>
-    91|        <li>人才生态：<b>AI 人才 + 数字员工 + 顾问 + 伙伴</b></li>
-    92|        <li>三类 AI 原生角色：<b>IC · DRI · Player-Coach</b></li>
-    93|        <li>四层分级：应用管理者 / 创新管理者 / 实践者 / 研究者</li>
-    94|        <li>考核升级：业务数字 <b>+ 能力数字</b>（场景数、替代率、复用）</li>
-    95|        <li>激励升级：奖励<b>业务贡献 + AI 能力贡献</b></li>
-    96|      </ul>
-    97|    </div>
-    98|
-    99|    <div class="pillar p4">
-   100|      <div class="phead"><span class="pnum n4">4</span><h3>文化导向重构</h3><span class="arrow">被动使用 → AI 优先</span></div>
-   101|      <ul>
-   102|        <li><b>敢想</b> — 主动识别 AI 可介入的业务痛点</li>
-   103|        <li><b>会问</b> — 围绕价值、可行性、合规安全追问</li>
-   104|        <li><b>善学</b> — 复盘提炼，将个人经验沉淀为组织能力</li>
-   105|        <li style="margin-top:8px;padding:8px 12px;background:rgba(245,158,11,0.06);border-radius:4px;">遇到问题先想 <b style="color:#fcd34d;">AI 能否参与</b>，而非被动等待指令</li>
-   106|      </ul>
-   107|    </div>
-   108|  </div>
-   109|
-   110|  <div class="highlight">
-   111|    <div class="hrow">
-   112|      <div class="hcol">
-   113|        <div class="hlabel">目标组织形态</div>
-   114|        <div class="hval"><b>扁平化 · 敏捷化 · AI 原生化</b><br>压缩层级，小队作战，平台赋能</div>
-   115|      </div>
-   116|      <div class="hcol">
-   117|        <div class="hlabel">关键角色</div>
-   118|        <div class="hval"><b>AI 训练师 · IC · DRI · Player-Coach</b><br>Agent 工程师 · AI 应用架构师</div>
-   119|      </div>
-   120|      <div class="hcol">
-   121|        <div class="hlabel">核心转变</div>
-   122|        <div class="hval"><b>从「先理解再动手」到「先调用再理解」</b><br>从「界定人做什么」到「界定人机如何协同」</div>
-   123|      </div>
-   124|    </div>
-   125|  </div>
-   126|
-   127|  <div class="footer">
-   128|    <div class="motto">遇到问题先思考 <b>AI 能否参与解决</b> · 敢想 · 会问 · 善学</div>
-   129|  </div>
-   130|</div>
-   131|</body>
-   132|</html>
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI原生组织重构框架</title>
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { background:#05080f; display:flex; justify-content:center; padding:30px 20px; font-family:-apple-system,BlinkMacSystemFont,'PingFang SC','Microsoft YaHei',sans-serif; }
+  .page { width:960px; background:linear-gradient(175deg, #090d18 0%, #0d1225 40%, #0a0f1c 100%); border-radius:2px; overflow:hidden; position:relative; border:1px solid rgba(255,255,255,0.04); }
+  .page::before { content:''; position:absolute; inset:0; background:radial-gradient(ellipse 800px 400px at 20% 0%, rgba(59,130,246,0.06), transparent), radial-gradient(ellipse 600px 500px at 80% 100%, rgba(139,92,246,0.05), transparent); pointer-events:none; }
+  .content { position:relative; z-index:1; padding:64px 72px 52px; }
+
+  .top-bar { display:flex; align-items:center; gap:16px; margin-bottom:60px; }
+  .top-bar .tag { font-size:9px; letter-spacing:5px; color:#60a5fa; font-weight:600; }
+  .top-bar .divider { flex:1; height:1px; background:rgba(255,255,255,0.06); }
+
+  h1 { font-size:44px; font-weight:900; color:#fff; line-height:1.15; margin-bottom:12px; letter-spacing:-0.5px; }
+  h1 span { background:linear-gradient(135deg, #60a5fa 0%, #a78bfa 100%); -webkit-background-clip:text; -webkit-text-fill-color:transparent; }
+  .hero-sub { font-size:14px; color:#6b7280; margin-bottom:56px; line-height:1.6; }
+
+  .framework { display:grid; grid-template-columns:1fr 1fr 1fr 1fr; gap:0; margin-bottom:48px; }
+  .fw-col { padding:0 20px; border-right:1px solid rgba(255,255,255,0.04); }
+  .fw-col:last-child { border-right:none; }
+
+  .fw-col .icon-block { width:44px; height:44px; border-radius:10px; display:flex; align-items:center; justify-content:center; font-size:20px; margin-bottom:18px; }
+  .fw-col:nth-child(1) .icon-block { background:rgba(59,130,246,0.12); }
+  .fw-col:nth-child(2) .icon-block { background:rgba(139,92,246,0.12); }
+  .fw-col:nth-child(3) .icon-block { background:rgba(16,185,129,0.12); }
+  .fw-col:nth-child(4) .icon-block { background:rgba(245,158,11,0.12); }
+
+  .fw-col h3 { font-size:16px; font-weight:700; margin-bottom:4px; }
+  .fw-col:nth-child(1) h3 { color:#93c5fd; }
+  .fw-col:nth-child(2) h3 { color:#c4b5fd; }
+  .fw-col:nth-child(3) h3 { color:#6ee7b7; }
+  .fw-col:nth-child(4) h3 { color:#fcd34d; }
+
+  .fw-col .shift { font-size:10px; color:#484f58; margin-bottom:16px; letter-spacing:0.5px; }
+  .fw-col .point { font-size:12px; color:#8b949e; line-height:1.7; margin-bottom:10px; }
+  .fw-col .point b { color:#bcc4d0; }
+
+  .accent-line { width:100%; height:1px; background:rgba(255,255,255,0.04); margin-bottom:40px; }
+
+  .bottom { display:grid; grid-template-columns:1fr 1fr; gap:0; }
+  .bottom .box { padding:20px 24px; border:1px solid rgba(255,255,255,0.04); }
+  .bottom .box:first-child { border-right:none; }
+  .bottom .box .blabel { font-size:9px; letter-spacing:3px; color:#484f58; margin-bottom:8px; text-transform:uppercase; }
+  .bottom .box .bval { font-size:13px; color:#8b949e; line-height:1.8; }
+  .bottom .box .bval b { color:#c9d1d9; }
+
+  .motto { text-align:center; margin-top:40px; padding-top:28px; border-top:1px solid rgba(255,255,255,0.04); }
+  .motto span { font-size:13px; color:#484f58; letter-spacing:1px; }
+  .motto span em { font-style:normal; color:#fcd34d; }
+</style>
+</head>
+<body>
+<div class="page">
+  <div class="content">
+
+    <div class="top-bar">
+      <span class="tag">AI-NATIVE TRANSFORMATION</span>
+      <span class="divider"></span>
+    </div>
+
+    <h1><span>AI 原生组织</span><br>重构框架</h1>
+    <div class="hero-sub">从组织、流程、人才、文化四个维度，系统构建 AI 驱动的未来企业</div>
+
+    <div class="framework">
+      <div class="fw-col">
+        <div class="icon-block">🏗️</div>
+        <h3>组织形态</h3>
+        <div class="shift">职能型 → 敏捷型</div>
+        <div class="point">组织<b>扁平化</b>，压缩层级，减少汇报拉通与人工催办</div>
+        <div class="point">建立跨部门<b>AI 场景小队</b>，业务提问、AI 赋能、合规前置</div>
+        <div class="point">建设公司级<b>AI 能力平台</b>，统一沉淀模型、数据与 Agent</div>
+        <div class="point">岗位从「人做什么」→<b>「人机协同」</b></div>
+        <div class="point">设专职<b>AI 训练师 AIT</b></div>
+      </div>
+      <div class="fw-col">
+        <div class="icon-block">⚡</div>
+        <h3>业务流程</h3>
+        <div class="shift">人工流转 → 智能驱动</div>
+        <div class="point"><b>管理流程</b> AI 化 → 决策质量与风控</div>
+        <div class="point"><b>业务流程</b> AI 化 → 增收提效规模化</div>
+        <div class="point"><b>辅助流程</b> AI 化 → 降本少人化</div>
+        <div class="point"><b>「先调用再理解」</b>替代文档堆砌</div>
+        <div class="point">制度<b>标签化 + 封装 Skill</b></div>
+      </div>
+      <div class="fw-col">
+        <div class="icon-block">🧠</div>
+        <h3>人才管理</h3>
+        <div class="shift">专业人才 → AI 增强型</div>
+        <div class="point"><b>IC·DRI·Player-Coach</b> 三类新角色</div>
+        <div class="point"><b>数字员工</b> + AI 人才 + 伙伴生态</div>
+        <div class="point">四层分级：管理者 / 研究者 / 实践者</div>
+        <div class="point">考核：业务数字<b>+ 能力数字</b></div>
+        <div class="point">激励：业务贡献<b>+ AI 贡献</b></div>
+      </div>
+      <div class="fw-col">
+        <div class="icon-block">🔥</div>
+        <h3>文化导向</h3>
+        <div class="shift">被动使用 → AI 优先</div>
+        <div class="point"><b>敢想</b> — 识别 AI 可介入的业务痛点</div>
+        <div class="point"><b>会问</b> — 围绕价值、可行性持续追问</div>
+        <div class="point"><b>善学</b> — 复盘提炼，沉淀为组织能力</div>
+      </div>
+    </div>
+
+    <div class="accent-line"></div>
+
+    <div class="bottom">
+      <div class="box">
+        <div class="blabel">目标形态</div>
+        <div class="bval"><b>扁平化 · 敏捷化 · AI 原生化</b><br>小队作战 × 平台赋能 × 人机协同</div>
+      </div>
+      <div class="box">
+        <div class="blabel">核心转变</div>
+        <div class="bval">从 <b>「先理解再动手」</b> 到 <b>「先调用再理解」</b><br>从 <b>「界定人做什么」</b> 到 <b>「界定人机如何协同」</b></div>
+      </div>
+    </div>
+
+    <div class="motto">
+      <span>遇到问题先思考 <em>AI 能否参与解决</em> · 敢想 · 会问 · 善学</span>
+    </div>
+
+  </div>
+</div>
+</body>
+</html>
