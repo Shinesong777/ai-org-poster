@@ -32,6 +32,9 @@ body{background:#f0f2f5;font-family:-apple-system,BlinkMacSystemFont,'PingFang S
 .sec h2{font-size:26px;font-weight:700;margin-bottom:4px}
 .sec .subtitle{font-size:13px;color:#888;margin-bottom:28px}
 
+.sec-diagram{text-align:center;margin-bottom:28px}
+.sec-diagram img{max-width:100%;border-radius:12px;border:1px solid #e5e7eb;box-shadow:0 2px 12px rgba(0,0,0,.06)}
+
 .accordion{margin-bottom:12px}
 .accordion-header{background:#fff;border:1px solid #e5e7eb;border-radius:10px;padding:18px 22px;cursor:pointer;display:flex;align-items:center;gap:12px;transition:.2s;user-select:none}
 .accordion-header:hover{box-shadow:0 2px 12px rgba(0,0,0,.04)}
@@ -99,7 +102,14 @@ tr:last-child td{border-bottom:none}
 .phase-tag.p3{background:#fce7f3;color:#be185d}
 
 .img-wrap{text-align:center;margin:16px 0}
-.img-wrap img{max-width:100%;border-radius:8px;border:1px solid #e5e7eb}
+.img-wrap img{max-width:100%;border-radius:8px;border:1px solid #e5e7eb;cursor:zoom-in;transition:.2s}
+.img-wrap img:hover{box-shadow:0 4px 20px rgba(0,0,0,.12)}
+
+.lightbox{display:none;position:fixed;inset:0;z-index:9999;background:rgba(0,0,0,.92);cursor:zoom-out}
+.lightbox.show{display:flex;align-items:center;justify-content:center}
+.lightbox img{max-width:95vw;max-height:95vh;border-radius:8px;box-shadow:0 8px 40px rgba(0,0,0,.5)}
+.lightbox .lb-close{position:absolute;top:20px;right:28px;color:#fff;font-size:32px;cursor:pointer;opacity:.6;transition:.2s}
+.lightbox .lb-close:hover{opacity:1}
 
 .footer-bar{background:linear-gradient(135deg,#1e3a5f,#2d1b69);color:#fff;text-align:center;padding:36px 0}
 .footer-bar .fb{font-size:16px;font-weight:700}
@@ -135,9 +145,11 @@ tr:last-child td{border-bottom:none}
   <a href="#s1">组织形态</a><a href="#s2">决策流程</a><a href="#s3">人才管理</a><a href="#s4">文化导向</a><a href="#s5">落地规划</a>
 </div></nav>
 
+<!-- Part 1 -->
 <div class="sec s-blue" id="s1"><div class="container">
 <h2>第一部分：组织形态重构</h2>
 <p class="subtitle">从「职能型组织」→「AI 驱动的敏捷型组织」</p>
+<div class="sec-diagram"><img src="https://raw.githubusercontent.com/Shinesong777/ai-org-poster/main/p2_img0.png" alt="组织形态全景" class="lbox"></div>
 
 <div class="accordion open">
   <div class="accordion-header"><span class="ah-icon">🏛️</span><span class="ah-title">（一）重新定义组织</span><span class="ah-arrow">▼</span></div>
@@ -145,7 +157,7 @@ tr:last-child td{border-bottom:none}
     <p style="font-size:13px;color:#555;margin-bottom:16px">目标：不断优化人和AI的分工边界，让AI承担高频重复、规则明确、数据处理类工作，释放人的精力聚焦判断与创造。</p>
     <div class="cards">
       <div class="card"><div class="cc">📐</div><h5>组织层级精简</h5>
-        <div class="img-wrap"><img src="https://raw.githubusercontent.com/Shinesong777/ai-org-poster/main/p12_img0.png" alt="组织精简成效"></div>
+        <div class="img-wrap"><img src="https://raw.githubusercontent.com/Shinesong777/ai-org-poster/main/p12_img0.png" alt="组织精简成效" class="lbox"></div>
         <ul><li>减少组织层级，打破部门墙</li><li>让AI取代组织的协调功能</li><li>信息流转更快，响应更迅速</li></ul>
       </div>
       <div class="card"><div class="cc">⚔️</div><h5>AI 场景小队/部落</h5><ul><li>覆盖电销、客服、风控、营销、消保、资管、HR、财务</li><li>业务提出问题，AI提供能力</li><li>风控、合规、消保、信息安全<b>前置把关</b></li></ul></div>
@@ -167,6 +179,7 @@ tr:last-child td{border-bottom:none}
 </div>
 </div></div>
 
+<!-- Part 2 -->
 <div class="sec s-purple" id="s2"><div class="container">
 <h2>第二部分：决策流程重构</h2>
 <p class="subtitle">从「经验驱动」→「AI 建议 + 人确定」</p>
@@ -203,6 +216,7 @@ tr:last-child td{border-bottom:none}
 </div>
 </div></div>
 
+<!-- Part 3 -->
 <div class="sec s-green" id="s3"><div class="container">
 <h2>第三部分：人才管理重构</h2>
 <p class="subtitle">从「传统专业人才」→「AI 增强型人才」</p>
@@ -231,6 +245,7 @@ tr:last-child td{border-bottom:none}
     </div>
 
     <div class="hl" style="margin-top:16px"><div class="hlt">🙋 AI 训练师 AIT</div><p>AI原生布道、场景识别、需求转译、<b>Prompt调优</b>、知识库整理、<b>RAG配置</b>、Agent训练和效果跟踪，帮助资深员工将经验沉淀为<b>可复用的Skill</b>。</p></div>
+    <div class="img-wrap"><img src="https://raw.githubusercontent.com/Shinesong777/ai-org-poster/main/p15_img0.png" alt="AI训练师能力模型" class="lbox" style="max-height:600px;width:auto"></div>
   </div>
 </div>
 
@@ -246,6 +261,8 @@ tr:last-child td{border-bottom:none}
       <div class="ind"><div class="ii">🤝</div><div class="it">人机协同类</div><div class="im">AI辅助任务占比、人工复核及时率、异常处理闭环率</div></div>
     </div>
 
+    <div class="img-wrap"><img src="https://raw.githubusercontent.com/Shinesong777/ai-org-poster/main/p14_img0.png" alt="考核体系全景" class="lbox" style="max-height:700px;width:auto"></div>
+
     <h5 style="margin:18px 0 10px">📝 AI 浓度自证</h5>
     <div class="conc3">
       <div class="conc ch"><div class="cn">172</div><div class="cl">高质量案例 10.4%</div></div>
@@ -253,8 +270,8 @@ tr:last-child td{border-bottom:none}
       <div class="conc clo"><div class="cn">665</div><div class="cl">无效案例 40.3%</div></div>
     </div>
     <div class="grid2" style="margin-top:16px">
-      <div class="img-wrap"><img src="https://raw.githubusercontent.com/Shinesong777/ai-org-poster/main/p7_img0.png" alt="AI浓度图示1"></div>
-      <div class="img-wrap"><img src="https://raw.githubusercontent.com/Shinesong777/ai-org-poster/main/p7_img1.png" alt="AI浓度图示2"></div>
+      <div class="img-wrap"><img src="https://raw.githubusercontent.com/Shinesong777/ai-org-poster/main/p7_img0.png" alt="AI浓度图示1" class="lbox"></div>
+      <div class="img-wrap"><img src="https://raw.githubusercontent.com/Shinesong777/ai-org-poster/main/p7_img1.png" alt="AI浓度图示2" class="lbox"></div>
     </div>
 
     <h5 style="margin:18px 0 8px">🏅 AI 人才能力分级（A1→A4）</h5>
@@ -275,6 +292,7 @@ tr:last-child td{border-bottom:none}
 </div>
 </div></div>
 
+<!-- Part 4 -->
 <div class="sec s-orange" id="s4"><div class="container">
 <h2>第四部分：文化导向重构</h2>
 <p class="subtitle">从「被动使用 AI」→「AI 优先的思维」→「AI 原生的心智」</p>
@@ -290,9 +308,7 @@ tr:last-child td{border-bottom:none}
       <div class="card"><h5>🧪 实验精神</h5><p style="font-size:12px;color:#666">高频率A/B测试，容忍失败。"假设-验证-迭代"极速循环。失败是模型训练的必要成本</p></div>
       <div class="card"><h5>🧑‍🎓 人才理念</h5><p style="font-size:12px;color:#666">人机协作 + T型人才。全员具备AI素养，将AI视为Copilot</p></div>
       <div class="card"><h5>🏗️ 组织架构</h5><p style="font-size:12px;color:#666">扁平化、流动性、中台化。跨职能敏捷小队。前台像搭积木调用智能能力</p></div>
-      <div class="card"><h5>⚖️ AI伦理与治理</h5><p style="font-size:12px;color:#666">公平性、可解释性、问责制嵌入AI全生命周期。伦理治理不是事后补救，而是贯穿全流程的"内建基因"</p>
-        <div class="img-wrap"><img src="https://raw.githubusercontent.com/Shinesong777/ai-org-poster/main/p8_img0.png" alt="文化维度图"></div>
-      </div>
+      <div class="card"><h5>⚖️ AI伦理与治理</h5><p style="font-size:12px;color:#666">公平性、可解释性、问责制嵌入AI全生命周期。伦理治理不是事后补救，而是贯穿全流程的"内建基因"</p></div>
     </div>
   </div>
 </div>
@@ -306,21 +322,20 @@ tr:last-child td{border-bottom:none}
       <b style="color:#10b981">善学</b> — 复盘提炼推广，个人经验→团队方法→组织能力
     </p>
     <div class="hl"><div class="hlt">🙋 Openclaw大赛案例已沉淀至案例库，上传学习平台</div></div>
+    <div class="img-wrap"><img src="https://raw.githubusercontent.com/Shinesong777/ai-org-poster/main/p8_img0.png" alt="文化维度全景图" class="lbox"></div>
   </div>
 </div>
 </div></div>
 
+<!-- Part 5 -->
 <div class="sec s-pink" id="s5"><div class="container">
 <h2>落地规划</h2>
-<div class="img-wrap" style="margin-bottom:24px"><img src="https://raw.githubusercontent.com/Shinesong777/ai-org-poster/main/p9_img0.png" alt="落地规划路线图"></div>
-
+<div class="img-wrap" style="margin-bottom:8px"><img src="https://raw.githubusercontent.com/Shinesong777/ai-org-poster/main/p9_img0.png" alt="落地规划路线图" class="lbox"></div>
 <p class="subtitle">AI导入 → AI深化 → AI原生，三阶段推进</p>
 
 <div class="accordion open">
   <div class="accordion-header"><span class="ah-icon"><span class="phase-tag p1">阶段一</span></span><span class="ah-title">AI 导入期（至2026年底）—— 完成AI原生组织与能力基础建设</span><span class="ah-arrow">▼</span></div>
   <div class="accordion-body">
-    <div class="img-wrap"><img src="https://raw.githubusercontent.com/Shinesong777/ai-org-poster/main/p14_img0.png" alt="规划详图"></div>
-    
     <div class="accordion" style="margin-bottom:10px">
       <div class="accordion-header"><span class="ah-icon">🎯</span><span class="ah-title">战略层：AI原生总体规划共创</span><span class="ah-arrow">▼</span></div>
       <div class="accordion-body">
@@ -373,7 +388,7 @@ tr:last-child td{border-bottom:none}
           <li>• 对各领域核心流程端到端梳理优化</li>
         </ul>
         <div class="hl"><div class="hlt">🙋 研发流程优化</div><p>传统：需求文档→产品设计→研发上线→测试<br>AI原生：需求提出（AI生成文档）→AI产品原型→AI coding demo→交付研发真实环境复刻</p>
-          <div class="img-wrap"><img src="https://raw.githubusercontent.com/Shinesong777/ai-org-poster/main/p16_img0.png" alt="流程图"></div>
+          <div class="img-wrap"><img src="https://raw.githubusercontent.com/Shinesong777/ai-org-poster/main/p16_img0.png" alt="流程图" class="lbox"></div>
         </div>
       </div>
     </div>
@@ -413,8 +428,9 @@ tr:last-child td{border-bottom:none}
     <p style="font-size:13px;color:#555;line-height:1.8">AI自行完成进化。从"用上AI"到"用深AI"，从"场景试点"到"全量重构"，从"个人经验"到"公司级能力沉淀"，从"单点提效"到"规模化价值产出"。</p>
   </div>
 </div>
-
 </div></div>
+
+<div class="lightbox" id="lb"><span class="lb-close">&times;</span><img src="" alt="" id="lb-img"></div>
 
 <div class="footer-bar"><div class="container">
   <p class="fb">遇到问题先思考 <em>AI 能否参与解决</em></p>
@@ -441,6 +457,16 @@ const observer = new IntersectionObserver(entries=>{
   });
 },{threshold:0.3});
 sections.forEach(s=>observer.observe(s));
+
+const lb = document.getElementById('lb');
+const lbImg = document.getElementById('lb-img');
+document.querySelectorAll('.lbox').forEach(img=>{
+  img.addEventListener('click',()=>{
+    lbImg.src = img.src;
+    lb.classList.add('show');
+  });
+});
+lb.addEventListener('click',()=>lb.classList.remove('show'));
 </script>
 </body>
 </html>
