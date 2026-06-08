@@ -17,7 +17,7 @@ body{background:#f0f2f5;font-family:-apple-system,BlinkMacSystemFont,'PingFang S
 .hero h1 span{background:linear-gradient(135deg,#60a5fa,#c4b5fd);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
 .hero .sub{font-size:15px;opacity:.7;margin-top:10px;max-width:650px;margin-left:auto;margin-right:auto}
 .nav{background:#fff;border-bottom:1px solid #e5e7eb;position:sticky;top:0;z-index:100;padding:12px 0}
-.nav .container{display:flex;gap:24px;overflow-x:auto}
+.nav .container{display:flex;gap:20px;overflow-x:auto}
 .nav a{font-size:13px;color:#666;text-decoration:none;white-space:nowrap;padding:6px 0;border-bottom:2px solid transparent;transition:.2s}
 .nav a:hover,.nav a.active{color:#3b82f6;border-bottom-color:#3b82f6}
 .sec{padding:48px 0;border-left:4px solid transparent}
@@ -47,7 +47,6 @@ body{background:#f0f2f5;font-family:-apple-system,BlinkMacSystemFont,'PingFang S
 .card ul{list-style:none;font-size:13px;color:#555}
 .card li{padding:3px 0;padding-left:14px;position:relative;line-height:1.6}
 .card li::before{content:'•';position:absolute;left:0;color:#3b82f6;font-weight:700}
-.card li b{color:#1a1a2e}
 .grid2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
 table{width:100%;border-collapse:collapse;font-size:13px;margin-top:12px}
 th{background:#f1f5f9;padding:10px 12px;text-align:left;font-weight:600;color:#444;font-size:12px;border-bottom:2px solid #e2e8f0}
@@ -67,7 +66,6 @@ tr:last-child td{border-bottom:none}
 .role .ri{font-size:30px;margin-bottom:6px}
 .role .rn{font-size:15px;font-weight:700;margin-bottom:8px}
 .role .rd{font-size:12px;color:#666;line-height:1.7}
-.role .rd b{color:#333}
 .ind6{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px}
 .ind{background:#fff;border-radius:10px;padding:18px;border:1px solid #e5e7eb;text-align:center}
 .ind .ii{font-size:22px;margin-bottom:6px}
@@ -84,6 +82,7 @@ tr:last-child td{border-bottom:none}
 .phase-tag.p1{background:#dbeafe;color:#1d4ed8}
 .phase-tag.p2{background:#ede9fe;color:#7c3aed}
 .phase-tag.p3{background:#fce7f3;color:#be185d}
+.task-num{display:inline-block;background:#e5e7eb;color:#555;font-size:11px;padding:2px 8px;border-radius:8px;margin-right:6px;font-weight:600}
 .img-wrap{text-align:center;margin:16px 0}
 .img-wrap img{max-width:100%;border-radius:8px;border:1px solid #e5e7eb;cursor:zoom-in;transition:.2s}
 .img-wrap img:hover{box-shadow:0 4px 20px rgba(0,0,0,.12)}
@@ -95,20 +94,8 @@ tr:last-child td{border-bottom:none}
 .footer-bar{background:linear-gradient(135deg,#1e3a5f,#2d1b69);color:#fff;text-align:center;padding:36px 0}
 .footer-bar .fb{font-size:16px;font-weight:700}
 .footer-bar .fb em{font-style:normal;color:#fcd34d}
-@media(max-width:768px){
-  .hero h1{font-size:28px}
-  .grid2{grid-template-columns:1fr}
-  .cards{grid-template-columns:1fr}
-  .matrix{grid-template-columns:1fr 1fr}
-  .role3{grid-template-columns:1fr}
-  .ind6{grid-template-columns:1fr 1fr}
-  .conc3{grid-template-columns:1fr}
-  .sec h2{font-size:22px}
-}
-@media(max-width:480px){
-  .ind6{grid-template-columns:1fr}
-  .matrix{font-size:10px}
-}
+@media(max-width:768px){.hero h1{font-size:28px}.grid2{grid-template-columns:1fr}.cards{grid-template-columns:1fr}.matrix{grid-template-columns:1fr 1fr}.role3{grid-template-columns:1fr}.ind6{grid-template-columns:1fr 1fr}.conc3{grid-template-columns:1fr}.sec h2{font-size:22px}}
+@media(max-width:480px){.ind6{grid-template-columns:1fr}.matrix{font-size:10px}}
 </style>
 </head>
 <body>
@@ -118,85 +105,56 @@ tr:last-child td{border-bottom:none}
 <p class="sub">以 AI 为新的基础生产力，将公司重新封装为可自循环的 AI 决策组织。</p>
 </div></div>
 <nav class="nav"><div class="container">
-<a href="#s0">关于AI Native</a><a href="#s1">组织形态</a><a href="#s2">决策流程</a><a href="#s3">人才管理</a><a href="#s4">文化导向</a><a href="#s5">落地规划</a>
+<a href="#s0">概述</a><a href="#s1">组织形态</a><a href="#s2">决策流程</a><a href="#s3">人才管理</a><a href="#s4">文化导向</a><a href="#s5">落地规划</a>
 </div></nav>
 <div class="sec s-intro" id="s0" style="padding:36px 0 28px"><div class="container">
-<div class="grid2" style="align-items:center">
-<div>
+<div class="grid2" style="align-items:center"><div>
 <h3 style="font-size:18px;margin-bottom:12px">💡 关于 AI Native</h3>
 <p style="font-size:14px;color:#555;line-height:1.9">AI Native 不是简单给现有工作叠加AI工具，也不是由技术部门建设若干AI应用，而是<b>以AI作为新的基础生产力</b>，重新定义公司的经营逻辑、协作方式和管理模式。</p>
 <p style="font-size:14px;color:#555;line-height:1.9;margin-top:8px">AI Native 意味着将公司的知识、规则、标准、流程和人的判断，重新封装为<b>可持续运行、持续更新、持续调用的组织Agent</b>，使公司本身逐步演进为 AI 自循环决策组织，从而提升经营管理能力。</p>
 <h3 style="font-size:18px;margin:16px 0 10px">🏗️ 基于AI原生重新定义公司管理机制</h3>
-<p style="font-size:14px;color:#555;line-height:1.9">AI Native的建设亦是在推进"战略-业务-组织-人才-文化"的全链条转型，同时对公司<b>四个关键管理体系</b>进行重构：组织形态重构、决策流程重构、人才管理重构、文化导向重构。</p>
+<p style="font-size:14px;color:#555;line-height:1.9">推进"战略-业务-组织-人才-文化"的全链条转型，对公司<b>四个关键管理体系</b>重构：组织形态重构、决策流程重构、人才管理重构、文化导向重构。</p>
 </div>
 <div class="img-wrap"><img src="https://raw.githubusercontent.com/Shinesong777/ai-org-poster/main/p1_img0.png" alt="AI Native全景" class="lbox"></div>
 </div></div></div>
 <div class="sec s-blue" id="s1"><div class="container">
 <h2>第一部分：组织形态重构</h2>
 <p class="subtitle">从「职能型组织」→「AI 驱动的敏捷型组织」</p>
-<div class="accordion open">
-<div class="accordion-header"><span class="ah-icon">🏛️</span><span class="ah-title">（一）重新定义组织</span><span class="ah-arrow">▼</span></div>
-<div class="accordion-body">
+<div class="accordion open"><div class="accordion-header"><span class="ah-icon">🏛️</span><span class="ah-title">（一）重新定义组织</span><span class="ah-arrow">▼</span></div><div class="accordion-body">
 <p style="font-size:13px;color:#555;margin-bottom:16px">目标：不断优化人和AI的分工边界，让AI承担高频重复、规则明确、数据处理类工作，释放人的精力聚焦判断与创造。</p>
 <div class="img-wrap" style="margin-bottom:20px"><img src="https://raw.githubusercontent.com/Shinesong777/ai-org-poster/main/p2_img0.png" alt="组织形态全景" class="lbox"></div>
 <div class="cards">
 <div class="card"><div class="cc">📐</div><h5>组织层级精简</h5><ul><li>减少组织层级，打破部门墙</li><li>让AI取代组织的协调功能</li><li>信息流转更快，响应更迅速</li></ul></div>
-<div class="card"><div class="cc">⚔️</div><h5>AI 场景小队/部落</h5><ul><li>覆盖电销、客服、风控、营销、消保、资管、HR、财务</li><li>业务提出问题，AI提供能力</li><li>风控、合规、消保、信息安全<b>前置把关</b></li></ul></div>
 <div class="card"><div class="cc">🏗️</div><h5>AI 能力平台</h5><ul><li>统一沉淀模型、数据、知识库</li><li>Agent工具、权限安全、评估监控</li><li>形成公司级AI公共底座</li></ul></div>
 </div></div></div>
-<div class="accordion open">
-<div class="accordion-header"><span class="ah-icon">🔁</span><span class="ah-title">（二）重新定义岗位：界定「人机如何协同履职」</span><span class="ah-arrow">▼</span></div>
-<div class="accordion-body">
-<div class="grid2">
-<div><h5 style="margin-bottom:8px">岗位变革</h5><p style="font-size:13px;color:#555;line-height:1.8">机械重复 → 交AI；人转向<b>定义问题、设定边界、处理特殊情况、审定结果</b>。裁撤重复操纵类岗位，推动相近岗位融合。</p></div>
-<div><h5 style="margin-bottom:8px">岗位新增</h5><p style="font-size:13px;color:#555;line-height:1.8"><b>AI应用架构师</b> · <b>Agent工程师</b> · <b>AI训练师（AIT）</b> · <b>AI数据治理师</b> · <b>AI技术栈人才</b></p></div>
-</div>
+<div class="accordion open"><div class="accordion-header"><span class="ah-icon">🔁</span><span class="ah-title">（二）重新定义岗位：界定「人机如何协同履职」</span><span class="ah-arrow">▼</span></div><div class="accordion-body">
+<div class="grid2"><div><h5 style="margin-bottom:8px">岗位变革</h5><p style="font-size:13px;color:#555;line-height:1.8">机械重复 → 交AI；人转向<b>定义问题、设定边界、处理特殊情况、审定结果</b>。裁撤重复操纵类岗位，推动相近岗位融合。</p></div>
+<div><h5 style="margin-bottom:8px">岗位新增</h5><p style="font-size:13px;color:#555;line-height:1.8"><b>AI应用架构师</b> · <b>Agent工程师</b> · <b>AI训练师（AIT）</b> · <b>AI数据治理师</b> · <b>AI技术栈人才</b></p></div></div>
 <div class="hl"><div class="hlt">🙋 人+数字员工的协作形成肌肉记忆</div><p>• 睁眼第一件事：跟数字员工对齐今天任务<br>• Code Review = 审 Agent<br>• 新人入职第一条：配好你的数字员工</p></div>
 </div></div></div></div>
 <div class="sec s-purple" id="s2"><div class="container">
 <h2>第二部分：决策流程重构</h2>
 <p class="subtitle">从「经验驱动」→「AI 建议 + 人确定」</p>
-<div class="accordion open">
-<div class="accordion-header"><span class="ah-icon">🤖</span><span class="ah-title">（一）重新定义决策</span><span class="ah-arrow">▼</span></div>
-<div class="accordion-body">
+<div class="accordion open"><div class="accordion-header"><span class="ah-icon">🤖</span><span class="ah-title">（一）重新定义决策</span><span class="ah-arrow">▼</span></div><div class="accordion-body">
 <p style="font-size:14px;color:#555;line-height:1.8;margin-bottom:14px">AI先完成<b>信息汇总、方案比较、风险识别和关键问题汇总</b>，管理者结合战略目标、业务现实和风险边界进行判断——AI进入"辅助判断"。</p>
-<div class="grid2">
-<div class="card"><div class="cc">🩸</div><h5>数据即血液</h5><p style="font-size:12px;color:#666">将业务数据、历史案例、管理规则、外部信息和专家经验导入AI可调用的知识体系，实现业务数据化、追溯化。</p></div>
-<div class="card"><div class="cc">🧠</div><h5>公司模型</h5><p style="font-size:12px;color:#666">将战略层-经营层-运营层-执行层能力接入AI，建立基于自身运营的"公司模型"，自动模拟-决策-优化。参考Block：AI持续构建公司全景图——正在构建什么、什么被阻塞、资源在哪、什么有效。</p></div>
-</div></div></div>
-<div class="accordion open">
-<div class="accordion-header"><span class="ah-icon">⚡</span><span class="ah-title">（二）重新定义流程：AI Agent 感知 → 自动生成任务 → 推送/执行 → 人确认异常</span><span class="ah-arrow">▼</span></div>
-<div class="accordion-body">
-<table>
+<div class="grid2"><div class="card"><div class="cc">🩸</div><h5>数据即血液</h5><p style="font-size:12px;color:#666">将业务数据、历史案例、管理规则、外部信息和专家经验导入AI可调用的知识体系，实现业务数据化、追溯化。</p></div>
+<div class="card"><div class="cc">🧠</div><h5>公司模型</h5><p style="font-size:12px;color:#666">将战略层-经营层-运营层-执行层能力接入AI，建立基于自身运营的"公司模型"，自动模拟-决策-优化。参考Block：AI持续构建公司全景图。</p></div></div></div></div>
+<div class="accordion open"><div class="accordion-header"><span class="ah-icon">⚡</span><span class="ah-title">（二）重新定义流程：AI Agent 感知 → 自动生成任务 → 推送/执行 → 人确认异常</span><span class="ah-arrow">▼</span></div><div class="accordion-body"><table>
 <tr><th>类型</th><th>旧流程</th><th>AI Native 新流程</th></tr>
 <tr><td><b>业务流程</b></td><td>面向客户，创造核心产品/服务，产生营收</td><td>AI提供市场模拟、压力测试、动态分配预算/排期/调价，<b>人做最终拍板</b></td></tr>
 <tr><td><b>管理流程</b></td><td>员工登录→申请→等审批→执行</td><td>AI统筹、监督、规则管控，<b>提升决策质量、透明度和风控</b></td></tr>
 <tr><td><b>辅助流程</b></td><td>为业务、管理提供资源、后勤、基础支撑赋能</td><td>沉淀Skills和Agent，<b>降本、提效、少人化、标准化</b></td></tr>
-</table>
-<div class="hl"><div class="hlt">🙋 入职流程变革</div><p>过去：一堆飞书文档 → 现在：<b>一组Skills + Agent + 使用指南</b>，「先调用再理解」</p></div>
-</div></div>
-<div class="accordion open">
-<div class="accordion-header"><span class="ah-icon">📋</span><span class="ah-title">（三）重新定义制度：从「方便人阅读」→「利于AI调用」</span><span class="ah-arrow">▼</span></div>
-<div class="accordion-body">
-<p style="font-size:13px;color:#555;line-height:1.8">制度<b>标签化处理</b>（规则、条件、步骤、审批节点、责任边界）→ AI可识别场景。围绕合同审核、客户投诉、采购管理等场景封装为<b>可调用的知识包/Skill</b>，即刻获得制度依据、风险提示、执行建议。</p>
-</div></div></div></div>
+</table><div class="hl"><div class="hlt">🙋 入职流程变革</div><p>过去：一堆飞书文档 → 现在：<b>一组Skills + Agent + 使用指南</b>，「先调用再理解」</p></div></div></div>
+<div class="accordion open"><div class="accordion-header"><span class="ah-icon">📋</span><span class="ah-title">（三）重新定义制度：从「方便人阅读」→「利于AI调用」</span><span class="ah-arrow">▼</span></div><div class="accordion-body"><p style="font-size:13px;color:#555;line-height:1.8">制度<b>标签化处理</b>（规则、条件、步骤、审批节点、责任边界）→ AI可识别场景。围绕合同审核、客户投诉、采购管理等场景封装为<b>可调用的知识包/Skill</b>，即刻获得制度依据、风险提示、执行建议。</p></div></div></div></div>
 <div class="sec s-green" id="s3"><div class="container">
 <h2>第三部分：人才管理重构</h2>
 <p class="subtitle">从「传统专业人才」→「AI 增强型人才」</p>
-<div class="accordion open">
-<div class="accordion-header"><span class="ah-icon">🌐</span><span class="ah-title">（一）重塑人才生态与角色</span><span class="ah-arrow">▼</span></div>
-<div class="accordion-body">
+<div class="accordion open"><div class="accordion-header"><span class="ah-icon">🌐</span><span class="ah-title">（一）重塑人才生态与角色</span><span class="ah-arrow">▼</span></div><div class="accordion-body">
 <p style="font-size:13px;color:#555;margin-bottom:16px">"智力白菜价"已成现实。构建 <b>AI全职人才 + 数字员工 + 顾问专家 + 高校合作</b> 的多元化人才生态。</p>
 <h5 style="margin-bottom:10px">📊 AI 人才分层分类矩阵</h5>
-<div class="matrix">
-<div class="mh"></div><div class="mh">非技术团队</div><div class="mh">技术团队</div>
-<div class="mh" style="font-weight:700">管理者</div>
-<div class="mc"><div class="mn">AI 应用管理者</div><div class="md">具备AI战略视野，领导团队完成人机协同转型</div><div class="mv">把控转型方向与落地质量</div></div>
-<div class="mc"><div class="mn">AI 创新管理者</div><div class="md">领导团队提升和突破AI底层能力</div><div class="mv">把控AI发展方向与技术变革</div></div>
-<div class="mh" style="font-weight:700">非管理者</div>
-<div class="mc"><div class="mn">AI 应用实践者</div><div class="md">将AI工具深度应用于业务场景</div><div class="mv">从工具到生产力</div></div>
-<div class="mc"><div class="mn">AI 专业研究者</div><div class="md">具备AI技术研发和创新能力</div><div class="mv">构建技术基础设施，决定"天花板"</div></div>
-</div>
+<div class="matrix"><div class="mh"></div><div class="mh">非技术团队</div><div class="mh">技术团队</div>
+<div class="mh" style="font-weight:700">管理者</div><div class="mc"><div class="mn">AI 应用管理者</div><div class="md">具备AI战略视野，领导团队完成人机协同转型</div><div class="mv">把控转型方向与落地质量</div></div><div class="mc"><div class="mn">AI 创新管理者</div><div class="md">领导团队提升和突破AI底层能力</div><div class="mv">把控AI发展方向与技术变革</div></div>
+<div class="mh" style="font-weight:700">非管理者</div><div class="mc"><div class="mn">AI 应用实践者</div><div class="md">将AI工具深度应用于业务场景</div><div class="mv">从工具到生产力</div></div><div class="mc"><div class="mn">AI 专业研究者</div><div class="md">具备AI技术研发和创新能力</div><div class="mv">构建技术基础设施，决定"天花板"</div></div></div>
 <h5 style="margin:20px 0 10px">👤 三类 AI 原生人才角色</h5>
 <div class="role3">
 <div class="role"><div class="ri">👤</div><div class="rn">IC · 个体贡献者</div><div class="rd"><b>职责：</b>构建和维护底层能力、训练和优化模型、自主完成深度任务、发现并解决系统异常<br><b>优势：</b>被Agent放大，一人覆盖一个团队的广度<br><b>特性：</b>深度专业、自主学习、创新力、判断力<br><b>路径：</b>实践者/研究者 → IC</div></div>
@@ -206,60 +164,24 @@ tr:last-child td{border-bottom:none}
 <div class="hl" style="margin-top:16px"><div class="hlt">🙋 AI 训练师 AIT</div><p>AI原生布道、场景识别、需求转译、<b>Prompt调优</b>、知识库整理、<b>RAG配置</b>、Agent训练和效果跟踪，帮助资深员工将经验沉淀为<b>可复用的Skill</b>。</p></div>
 <div class="img-wrap"><img src="https://raw.githubusercontent.com/Shinesong777/ai-org-poster/main/p15_img0.png" alt="AI训练师能力模型" class="lbox" style="max-height:600px;width:auto"></div>
 </div></div>
-<div class="accordion open">
-<div class="accordion-header"><span class="ah-icon">📈</span><span class="ah-title">（二）重新定义考核：业务数字 + AI 能力数字</span><span class="ah-arrow">▼</span></div>
-<div class="accordion-body">
-<div class="ind6">
-<div class="ind"><div class="ii">🚀</div><div class="it">场景落地类</div><div class="im">AI场景立项/上线数量、数字员工上岗数量、重点场景覆盖率</div></div>
-<div class="ind"><div class="ii">⚙️</div><div class="it">流程改造类</div><div class="im">流程AI替代率、人工/审批环节压缩、自动化报表数量</div></div>
-<div class="ind"><div class="ii">🧩</div><div class="it">能力沉淀类</div><div class="im">Agent数量、Skill数量、知识库数量、数据资产沉淀数量</div></div>
-<div class="ind"><div class="ii">🔄</div><div class="it">复用推广类</div><div class="im">AI调用次数、跨部门复用次数、优秀案例推广数量</div></div>
-<div class="ind"><div class="ii">📊</div><div class="it">使用活跃类</div><div class="im">员工AI使用率、Token使用量、工具使用频次</div></div>
-<div class="ind"><div class="ii">🤝</div><div class="it">人机协同类</div><div class="im">AI辅助任务占比、人工复核及时率、异常处理闭环率</div></div>
-</div>
+<div class="accordion open"><div class="accordion-header"><span class="ah-icon">📈</span><span class="ah-title">（二）重新定义考核：业务数字 + AI 能力数字</span><span class="ah-arrow">▼</span></div><div class="accordion-body">
+<div class="ind6"><div class="ind"><div class="ii">🚀</div><div class="it">场景落地类</div><div class="im">AI场景立项/上线数量、数字员工上岗数量、重点场景覆盖率</div></div><div class="ind"><div class="ii">⚙️</div><div class="it">流程改造类</div><div class="im">流程AI替代率、人工/审批环节压缩、自动化报表数量</div></div><div class="ind"><div class="ii">🧩</div><div class="it">能力沉淀类</div><div class="im">Agent数量、Skill数量、知识库数量、数据资产沉淀数量</div></div><div class="ind"><div class="ii">🔄</div><div class="it">复用推广类</div><div class="im">AI调用次数、跨部门复用次数、优秀案例推广数量</div></div><div class="ind"><div class="ii">📊</div><div class="it">使用活跃类</div><div class="im">员工AI使用率、Token使用量、工具使用频次</div></div><div class="ind"><div class="ii">🤝</div><div class="it">人机协同类</div><div class="im">AI辅助任务占比、人工复核及时率、异常处理闭环率</div></div></div>
 <div class="img-wrap"><img src="https://raw.githubusercontent.com/Shinesong777/ai-org-poster/main/p14_img0.png" alt="考核体系全景" class="lbox" style="max-height:700px;width:auto"></div>
 <h5 style="margin:18px 0 10px">📝 AI 浓度自证</h5>
-<div class="conc3">
-<div class="conc ch"><div class="cn">172</div><div class="cl">高质量案例 10.4%</div></div>
-<div class="conc cm"><div class="cn">812</div><div class="cl">有效案例 49.3%</div></div>
-<div class="conc clo"><div class="cn">665</div><div class="cl">无效案例 40.3%</div></div>
-</div>
-<div class="grid2" style="margin-top:16px">
-<div class="img-wrap"><img src="https://raw.githubusercontent.com/Shinesong777/ai-org-poster/main/p7_img0.png" alt="AI浓度图示1" class="lbox"></div>
-<div class="img-wrap"><img src="https://raw.githubusercontent.com/Shinesong777/ai-org-poster/main/p7_img1.png" alt="AI浓度图示2" class="lbox"></div>
-</div>
+<div class="conc3"><div class="conc ch"><div class="cn">172</div><div class="cl">高质量案例 10.4%</div></div><div class="conc cm"><div class="cn">812</div><div class="cl">有效案例 49.3%</div></div><div class="conc clo"><div class="cn">665</div><div class="cl">无效案例 40.3%</div></div></div>
+<div class="grid2" style="margin-top:16px"><div class="img-wrap"><img src="https://raw.githubusercontent.com/Shinesong777/ai-org-poster/main/p7_img0.png" alt="AI浓度图示1" class="lbox"></div><div class="img-wrap"><img src="https://raw.githubusercontent.com/Shinesong777/ai-org-poster/main/p7_img1.png" alt="AI浓度图示2" class="lbox"></div></div>
 <h5 style="margin:18px 0 8px">🏅 AI 人才能力分级（A1→A4）</h5>
-<table>
-<tr><th>级别</th><th>含义</th><th>描述</th></tr>
-<tr><td><b>A1</b></td><td>感知与应用</td><td>了解AI基本概念，能使用成熟AI工具辅助日常工作</td></tr>
-<tr><td><b>A2</b></td><td>融合与增效</td><td>将AI工具深度嵌入工作流，通过提示工程优化输出</td></tr>
-<tr><td><b>A3</b></td><td>分析与方案</td><td>基于业务需求设计AI应用方案，评估模型/工具效果，分析ROI</td></tr>
-<tr><td><b>A4</b></td><td>创新与赋能</td><td>推动AI创新应用，主导AI项目，跨领域知识整合，赋能他人</td></tr>
-</table>
-<div class="hl" style="margin-bottom:14px"><div class="hlt">🛡️ 考核护航人机协同运转</div><p>伴随人机协同改革，考核端要加强对人机协同效果的监控，关注效率、结果质量、业务连续性变化等。及时发现并干预因人机协同带来的风险，确保业务运行稳定有序。</p></div>
-<div class="grid2" style="margin-top:16px">
-<div class="hl"><div class="hlt">🏆 激励</div><p>专项奖励AI场景落地、流程改造、能力沉淀、<b>Skill复用</b>。"业务贡献"与"AI能力贡献"并重。</p></div>
-<div class="hl"><div class="hlt">💰 预算</div><p>单独核算AI投入、人力节省、营收增量、能力沉淀价值。避免<b>只看投入、不看产出</b>。</p></div>
-</div></div></div></div></div>
+<table><tr><th>级别</th><th>含义</th><th>描述</th></tr><tr><td><b>A1</b></td><td>感知与应用</td><td>了解AI基本概念，能使用成熟AI工具辅助日常工作</td></tr><tr><td><b>A2</b></td><td>融合与增效</td><td>将AI工具深度嵌入工作流，通过提示工程优化输出</td></tr><tr><td><b>A3</b></td><td>分析与方案</td><td>基于业务需求设计AI应用方案，评估模型/工具效果，分析ROI</td></tr><tr><td><b>A4</b></td><td>创新与赋能</td><td>推动AI创新应用，主导AI项目，跨领域知识整合，赋能他人</td></tr></table>
+<div class="hl" style="margin-bottom:14px"><div class="hlt">🛡️ 考核护航人机协同运转</div><p>伴随人机协同改革，考核端要加强对人机协同效果的监控，关注效率、结果质量、业务连续性变化等。</p></div>
+<div class="grid2" style="margin-top:16px"><div class="hl"><div class="hlt">🏆 激励</div><p>专项奖励AI场景落地、流程改造、能力沉淀、<b>Skill复用</b>。"业务贡献"与"AI能力贡献"并重。</p></div><div class="hl"><div class="hlt">💰 预算</div><p>单独核算AI投入、人力节省、营收增量、能力沉淀价值。避免<b>只看投入、不看产出</b>。</p></div></div>
+</div></div></div></div>
 <div class="sec s-orange" id="s4"><div class="container">
 <h2>第四部分：文化导向重构</h2>
 <p class="subtitle">从「被动使用 AI」→「AI 优先的思维」→「AI 原生的心智」</p>
-<div class="accordion open">
-<div class="accordion-header"><span class="ah-icon">🎯</span><span class="ah-title">（一）文化理念与七大维度</span><span class="ah-arrow">▼</span></div>
-<div class="accordion-body">
+<div class="accordion open"><div class="accordion-header"><span class="ah-icon">🎯</span><span class="ah-title">（一）文化理念与七大维度</span><span class="ah-arrow">▼</span></div><div class="accordion-body">
 <p style="font-size:13px;color:#555;margin-bottom:14px">秉承"<b>源于AI、拥有AI、应用AI、开放AI</b>"，员工核心贡献不再是"执行指令"，而是"快速定义并抽象问题，利用AI满足用户需求"。</p>
-<div class="cards">
-<div class="card"><h5>🔍 开放透明</h5><p style="font-size:12px;color:#666">信息透明、决策透明、协作透明、知识透明、反馈透明，让信息流动，让决策可见</p></div>
-<div class="card"><h5>💡 思辨能力</h5><p style="font-size:12px;color:#666">不盲从AI输出，敢于追问数据来源、逻辑是否成立。对AI产出有价值判断</p></div>
-<div class="card"><h5>📊 数据驱动</h5><p style="font-size:12px;color:#666">"数据即产品"，全量全要素连接。谁使用数据谁定义数据，推崇DataOps</p></div>
-<div class="card"><h5>🧪 实验精神</h5><p style="font-size:12px;color:#666">高频率A/B测试，容忍失败。"假设-验证-迭代"极速循环。失败是模型训练的必要成本</p></div>
-<div class="card"><h5>🧑‍🎓 人才理念</h5><p style="font-size:12px;color:#666">人机协作 + T型人才。全员具备AI素养，将AI视为Copilot</p></div>
-<div class="card"><h5>🏗️ 组织架构</h5><p style="font-size:12px;color:#666">扁平化、流动性、中台化。跨职能敏捷小队。前台像搭积木调用智能能力</p></div>
-<div class="card"><h5>⚖️ AI伦理与治理</h5><p style="font-size:12px;color:#666">公平性、可解释性、问责制嵌入AI全生命周期。伦理治理不是事后补救，而是贯穿全流程的"内建基因"</p></div>
-</div></div></div>
-<div class="accordion open">
-<div class="accordion-header"><span class="ah-icon">🏆</span><span class="ah-title">（二）从「执行者」→「主人翁」：敢想 · 会问 · 善学</span><span class="ah-arrow">▼</span></div>
-<div class="accordion-body">
+<div class="cards"><div class="card"><h5>🔍 开放透明</h5><p style="font-size:12px;color:#666">信息透明、决策透明、协作透明、知识透明、反馈透明，让信息流动，让决策可见</p></div><div class="card"><h5>💡 思辨能力</h5><p style="font-size:12px;color:#666">不盲从AI输出，敢于追问数据来源、逻辑是否成立。对AI产出有价值判断</p></div><div class="card"><h5>📊 数据驱动</h5><p style="font-size:12px;color:#666">"数据即产品"，全量全要素连接。谁使用数据谁定义数据，推崇DataOps</p></div><div class="card"><h5>🧪 实验精神</h5><p style="font-size:12px;color:#666">高频率A/B测试，容忍失败。"假设-验证-迭代"极速循环。失败是模型训练的必要成本</p></div><div class="card"><h5>🧑‍🎓 人才理念</h5><p style="font-size:12px;color:#666">人机协作 + T型人才。全员具备AI素养，将AI视为Copilot</p></div><div class="card"><h5>🏗️ 组织架构</h5><p style="font-size:12px;color:#666">扁平化、流动性、中台化。跨职能敏捷小队。前台像搭积木调用智能能力</p></div><div class="card"><h5>⚖️ AI伦理与治理</h5><p style="font-size:12px;color:#666">公平性、可解释性、问责制嵌入AI全生命周期。伦理治理不是事后补救，而是贯穿全流程的"内建基因"</p></div></div></div></div>
+<div class="accordion open"><div class="accordion-header"><span class="ah-icon">🏆</span><span class="ah-title">（二）从「执行者」→「主人翁」：敢想 · 会问 · 善学</span><span class="ah-arrow">▼</span></div><div class="accordion-body">
 <p style="font-size:13px;color:#555;line-height:2.2"><b style="color:#3b82f6">敢想</b> — 主动识别AI可介入的业务痛点和管理难点<br><b style="color:#8b5cf6">会问</b> — 围绕价值、可行性、合规安全持续追问<br><b style="color:#10b981">善学</b> — 复盘提炼推广，个人经验→团队方法→组织能力</p>
 <div class="hl"><div class="hlt">🙋 Openclaw大赛案例已沉淀至案例库，上传学习平台</div></div>
 <div class="img-wrap"><img src="https://raw.githubusercontent.com/Shinesong777/ai-org-poster/main/p8_img0.png" alt="文化维度全景图" class="lbox"></div>
@@ -267,28 +189,67 @@ tr:last-child td{border-bottom:none}
 <div class="sec s-pink" id="s5"><div class="container">
 <h2>落地规划</h2>
 <div class="img-wrap" style="margin-bottom:8px"><img src="https://raw.githubusercontent.com/Shinesong777/ai-org-poster/main/p9_img0.png" alt="落地规划路线图" class="lbox"></div>
-<p class="subtitle">AI导入 → AI深化 → AI原生，三阶段推进</p>
-<div class="accordion open">
-<div class="accordion-header"><span class="ah-icon"><span class="phase-tag p1">阶段一</span></span><span class="ah-title">AI 导入期（至2026年底）—— 完成AI原生组织与能力基础建设</span><span class="ah-arrow">▼</span></div>
-<div class="accordion-body">
-<div class="accordion" style="margin-bottom:10px"><div class="accordion-header"><span class="ah-icon">🎯</span><span class="ah-title">战略层：AI原生总体规划共创</span><span class="ah-arrow">▼</span></div><div class="accordion-body"><ul style="font-size:13px;color:#555;line-height:2;list-style:none"><li>• AI Native统筹部门+战略规划部+项目管理部+AI委员会+AI研究院 共创共识</li><li>• 以2026为关键转型起始点，对未来3年战略进行总体设计</li><li>• <b>经营分析AI转型</b>：构建企业级经营分析AI中台，覆盖日报、周会、风控/客户/贷后场景</li><li>• 早上看Agent生成日报，周会报告Agent提前1天自动生成，会议时间压缩50%以上</li></ul></div></div>
-<div class="accordion" style="margin-bottom:10px"><div class="accordion-header"><span class="ah-icon">📦</span><span class="ah-title">业务层：AI场景小队+数字员工专项</span><span class="ah-arrow">▼</span></div><div class="accordion-body"><table><tr><th>部落</th><th>参与部门</th><th>牵头人</th></tr><tr><td>大市场</td><td>市场营销/金融生态+产研+AI</td><td>安峰总</td></tr><tr><td>大运营</td><td>运营管理+产研+AI</td><td>刘磊总</td></tr><tr><td>大消保</td><td>消保客服+产研+AI</td><td>曹景泉总</td></tr><tr><td>风控</td><td>风控板块+产研+AI</td><td>魏新总</td></tr><tr><td>AI基础建设</td><td>技术部+AI研究院</td><td>吴鹏总</td></tr><tr><td>职能</td><td>各职能+产研+AI</td><td>自行组织</td></tr></table><p style="font-size:13px;color:#555;margin-top:12px"><b>数字员工专项：</b>目标立项≥30个，上岗≥20个。四要素：<b>可感知</b>（有交互渠道）、<b>可岗位化</b>（有岗位定义）、<b>可完成具体任务</b>、<b>可量化管理</b></p><div class="hl"><div class="hlt">🙋 Claw 智能风控助理</div><p>已通过OpenClaw+飞书机器人实现风控固定监控分析任务和临时深度分析的自动化。覆盖审批监控、指标追踪、风险预警，直接服务风控决策核心环节。</p></div></div></div>
-<div class="accordion" style="margin-bottom:10px"><div class="accordion-header"><span class="ah-icon">🏢</span><span class="ah-title">管理层：组织精简+岗位转型+考核机制</span><span class="ah-arrow">▼</span></div><div class="accordion-body"><ul style="font-size:13px;color:#555;line-height:2;list-style:none"><li>• 四/五级组织减少<b>339个</b>，降幅约<b>47.3%</b>，年内精简为三层组织</li></ul><div class="img-wrap"><img src="https://raw.githubusercontent.com/Shinesong777/ai-org-poster/main/p12_img0.png" alt="组织精简成效" class="lbox"></div><ul style="font-size:13px;color:#555;line-height:2;list-style:none"><li>• 裁撤重复操作类岗位，引导管理岗转向"管AI流程、管数据质量、管人机协同"</li><li>• 技术岗转向AI应用开发、Agent编排、RAG搭建、模型调用</li><li>• 建成"业务数字+能力数字"考核机制</li><li>• 基于360°+AI模型进行人才盘点，引入A1-A4分级标准</li><li>• 重塑AI原生文化：更新为"AI原生的金融机构"，引入"透明""开放""数据驱动""判断力"等新文化内涵</li></ul></div></div>
-<div class="accordion" style="margin-bottom:10px"><div class="accordion-header"><span class="ah-icon">🔄</span><span class="ah-title">决策与流程层：AI进入日常流程</span><span class="ah-arrow">▼</span></div><div class="accordion-body"><ul style="font-size:13px;color:#555;line-height:2;list-style:none"><li>• OA流程审批环节提供AI辅助决策，已覆盖约<b>100个</b>有制度支持的流程</li><li>• 自定义决策规则封装为可复用Skill</li><li>• 对各领域核心流程端到端梳理优化</li></ul><div class="hl"><div class="hlt">🙋 研发流程优化</div><p>传统：需求文档→产品设计→研发上线→测试<br>AI原生：需求提出（AI生成文档）→AI产品原型→AI coding demo→交付研发真实环境复刻</p><div class="img-wrap"><img src="https://raw.githubusercontent.com/Shinesong777/ai-org-poster/main/p16_img0.png" alt="流程图" class="lbox"></div></div></div></div>
-<div class="accordion"><div class="accordion-header"><span class="ah-icon">⚙️</span><span class="ah-title">AI能力底座层：五大建设任务</span><span class="ah-arrow">▼</span></div><div class="accordion-body"><ul style="font-size:13px;color:#555;line-height:2;list-style:none"><li>• <b>AI能力底座</b>：统一入口+规范+知识库，CodeGraph+Onyx知识库</li><li>• <b>AI聚合网关</b>：模型统一调度+Token全生命周期管理</li><li>• <b>Agent开发平台</b>：5分钟构建运行一个Agent，安全调用内部系统</li><li>• <b>AI能力门户</b>：SkillHub市场、Prompt中心、AI案例库、社区运营</li><li>• 每季度阶段性看目标、找差距、定问题的会议机制</li></ul></div></div>
+<p class="subtitle">按照"AI导入—AI深化—AI原生"的节奏分阶段推进。通过对五层架构重新解构，先解决"用起来"，再以点带面让AI全方位嵌入业务，最后实现AI成为公司运行的核心能力。</p>
+<div class="accordion open"><div class="accordion-header"><span class="ah-icon"><span class="phase-tag p1">阶段一</span></span><span class="ah-title">AI 导入期（至2026年底）—— 完成AI原生组织与能力基础建设，全面推广使用AI初有成效</span><span class="ah-arrow">▼</span></div><div class="accordion-body">
+<div class="accordion" style="margin-bottom:10px"><div class="accordion-header"><span class="ah-icon">🎯</span><span class="ah-title">1. 战略层：定义AI Native方向和目标</span><span class="ah-arrow">▼</span></div><div class="accordion-body">
+<p style="font-size:13px;color:#555;margin-bottom:12px">完成公司AI原生总体规划，明确建设方向、阶段目标和重点任务，形成从公司级战略到条线任务的统一部署。</p>
+<p style="font-size:13px;color:#555;margin-bottom:8px"><span class="task-num">任务一</span><b>AI原生总体规划共创</b>：AI Native统筹部门+战略规划部+项目管理部+AI委员会+AI研究院共创共识，以2026为关键转型起始点，对未来3年战略进行总体设计。</p>
+<p style="font-size:13px;color:#555;margin-bottom:8px"><span class="task-num">任务二</span><b>设定AI原生组织经营指标与模型</b>：从技术性能推演至财务影响，验证转型升级效果，及时纠偏。</p>
+<div class="hl"><div class="hlt">🙋 经营分析AI转型</div><p>以数据+模型+经验沉淀+流程重构为核心，构建企业级经营分析AI中台。<br><b>场景1 每日复盘：</b>早上看Agent生成日报，异常指标直接标注，由业务+数据共同确认根因，同步优化Agent逻辑。新规则由AI训练师沉淀为Skill，次日自动生效。<br><b>场景2 周/月经营会议：</b>Agent提前1天自动生成报告，会前飞阅会批注，会议时间压缩50%以上。会议由问题讨论、策略制定、Agent优化项确认替代传统汇报。</p></div>
 </div></div>
-<div class="accordion"><div class="accordion-header"><span class="ah-icon"><span class="phase-tag p2">阶段二</span></span><span class="ah-title">AI 深化期 —— AI 全面嵌入业务和管理流</span><span class="ah-arrow">▼</span></div><div class="accordion-body"><table><tr><th>层级</th><th>从……</th><th>提升为……</th></tr><tr><td>战略层</td><td>形成公司级规划</td><td><b>年度资源配置和价值牵引</b></td></tr><tr><td>业务层</td><td>若干场景探索</td><td><b>核心业务场景端到端重构</b></td></tr><tr><td>管理层</td><td>AI化基础改造</td><td><b>AI原生管理机制成型</b>：岗位转型融合、数字员工管理</td></tr><tr><td>决策流程层</td><td>流程局部接入AI</td><td><b>核心流程AI化重构</b>：人工推动→AI辅助运行，人负责关键判断</td></tr><tr><td>AI底座层</td><td>工具入口和基础建设</td><td><b>公司级AI公共底座</b>：统一沉淀、统一调用、统一治理</td></tr></table></div></div>
-<div class="accordion"><div class="accordion-header"><span class="ah-icon"><span class="phase-tag p3">阶段三</span></span><span class="ah-title">AI 原生期 —— AI 成为组织核心能力，形成持续自进化的 AI 原生竞争力</span><span class="ah-arrow">▼</span></div><div class="accordion-body"><p style="font-size:13px;color:#555;line-height:1.8">AI自行完成进化。从"用上AI"到"用深AI"，从"场景试点"到"全量重构"，从"个人经验"到"公司级能力沉淀"，从"单点提效"到"规模化价值产出"。</p></div></div>
+<div class="accordion" style="margin-bottom:10px"><div class="accordion-header"><span class="ah-icon">📦</span><span class="ah-title">2. 业务层：启动业务场景探索，推动AI重塑核心业务</span><span class="ah-arrow">▼</span></div><div class="accordion-body">
+<p style="font-size:13px;color:#555;margin-bottom:8px"><span class="task-num">任务一</span><b>开展各部落AI流程重塑尝试</b>：依托2026半年度战略与反思共创会，围绕电销、客服、风控、营销、消保、资管、HR、财务等领域推动。三个维度：(1) AI实践案例借鉴——各板块调研3个顶级案例；(2) AI原生变革路线图——定义关键问题和分阶段里程碑；(3) 下半年计划——具体规划、资源需求。</p>
+<table><tr><th>部落</th><th>参与部门</th><th>牵头人</th></tr><tr><td>大市场</td><td>市场营销/金融生态+产研+AI</td><td>安峰总</td></tr><tr><td>大运营</td><td>运营管理+产研+AI</td><td>刘磊总</td></tr><tr><td>大消保</td><td>消保客服+产研+AI</td><td>曹景泉总</td></tr><tr><td>风控</td><td>风控板块+产研+AI</td><td>魏新总</td></tr><tr><td>AI基础建设</td><td>技术部+AI研究院</td><td>吴鹏总</td></tr><tr><td>职能（自组织）</td><td>各职能+产研+AI</td><td>自行组织</td></tr></table>
+<p style="font-size:13px;color:#555;margin-top:12px"><span class="task-num">任务二</span><b>开展各域数字员工专项</b>：目标立项≥30个，上岗≥20个。流程：业务定位场景→技术评估→赋能实操→共建数字员工→小队共训练→上岗运营。四要素：<b>可感知</b>（有交互渠道）、<b>可岗位化</b>（有岗位定义）、<b>可完成具体任务</b>、<b>可量化管理</b>。</p>
+<div class="hl"><div class="hlt">🙋 Claw 智能风控助理</div><p>已通过OpenClaw+飞书机器人实现风控固定监控分析任务和临时深度分析的自动化。覆盖审批监控、指标追踪、风险预警，直接服务风控决策核心环节。</p></div>
+<p style="font-size:13px;color:#555;margin-top:12px"><span class="task-num">任务三</span><b>季度阶段性回顾机制</b>：以季度为节点就AI重塑业务及数字员工建设情况集中回看，找差距、定位问题、共识下一阶段推进计划。</p>
+</div></div>
+<div class="accordion" style="margin-bottom:10px"><div class="accordion-header"><span class="ah-icon">🏢</span><span class="ah-title">3. 管理层：围绕AI原生重构组织、岗位、人才、考核、文化机制</span><span class="ah-arrow">▼</span></div><div class="accordion-body">
+<p style="font-size:13px;color:#555;margin-bottom:8px"><span class="task-num">任务一</span><b>进一步精简组织层级</b>：四级、五级组织减少<b>339个</b>，降幅约<b>47.3%</b>，末尾组织减少占据90%。年内精简为三层组织。聚焦压缩仅做信息汇总、上传下达、进度催办等中间层。</p>
+<div class="img-wrap"><img src="https://raw.githubusercontent.com/Shinesong777/ai-org-poster/main/p12_img0.png" alt="组织精简成效" class="lbox"></div>
+<p style="font-size:13px;color:#555;margin-bottom:8px"><span class="task-num">任务二</span><b>全面梳理岗位体系，推动低价值岗位转型</b>：重新编制岗位职责，规划人机协同。逐步裁撤重复操作类职能岗位；引导管理岗转向"管AI流程、管数据质量、管人机协同、管结果责任"；引导技术岗转向AI应用开发、Agent编排、RAG搭建、模型调用。</p>
+<p style="font-size:13px;color:#555;margin-bottom:8px"><span class="task-num">任务三</span><b>建成"业务数字+能力数字"考核机制</b>：Token消耗量不等于AI价值创造，建立以业务结果为终点的AI原生过程性指标。</p>
+<p style="font-size:13px;color:#555;margin-bottom:8px"><span class="task-num">任务四</span><b>岗位缺位和能力补充，新增岗位并引入专业人才</b>：新增AI应用架构师、Agent工程师、AI训练师（AIT）、AI数据治理师、AI技术栈人才。</p>
+<p style="font-size:13px;color:#555;margin-bottom:8px"><span class="task-num">任务五</span><b>人才盘点，重新定义人才</b>：基于360°评估+客观数据+绩效进行干部分类分级，形成九宫格落位。引入A1-A4分级标准。</p>
+<p style="font-size:13px;color:#555"><span class="task-num">任务六</span><b>重塑AI原生文化</b>：更新为"AI原生的金融机构"，保留"诚信""团队""效率""创新""以用户为中心"，引入"透明""开放""数据驱动""判断力"等新内涵。2026下半年开展AI原生文化调研及内部共创。</p>
+</div></div>
+<div class="accordion" style="margin-bottom:10px"><div class="accordion-header"><span class="ah-icon">🔄</span><span class="ah-title">4. 决策与流程层：AI进入日常决策和流程运行</span><span class="ah-arrow">▼</span></div><div class="accordion-body">
+<p style="font-size:13px;color:#555;margin-bottom:8px"><span class="task-num">任务一</span><b>AI辅助流程决策</b>：在OA流程审批环节提供AI辅助决策，对流程风险标识和决策建议，已覆盖约<b>100个</b>有制度支持的流程。</p>
+<p style="font-size:13px;color:#555;margin-bottom:8px"><span class="task-num">任务二</span><b>支持自定义决策规则经验沉淀</b>：将流程授权、自定义决策、个性化决策能力封装为可复用Skill，支持规则内AI授权决策。</p>
+<div class="hl"><div class="hlt">🙋 决策流程优化</div><p>在规则范围内的员工出差流程，基于流程风险识别，绿色可做AI授权自动审批。</p></div>
+<p style="font-size:13px;color:#555;margin:8px 0"><span class="task-num">任务三</span><b>对各领域核心流程端到端梳理优化</b>：全面开展制度、流程、授权等内容扫描，针对AI原生转型方向优化。</p>
+<div class="hl"><div class="hlt">🙋 研发流程优化</div><p>传统：需求文档→产品设计→研发上线→测试<br>AI原生：需求提出（AI生成文档）→AI产品原型→AI coding demo→交付研发真实环境复刻，极高提升研发效率。</p><div class="img-wrap"><img src="https://raw.githubusercontent.com/Shinesong777/ai-org-poster/main/p16_img0.png" alt="流程图" class="lbox"></div></div>
+</div></div>
+<div class="accordion"><div class="accordion-header"><span class="ah-icon">⚙️</span><span class="ah-title">5. AI能力底座层：建设统一AI工具入口和治理能力支撑</span><span class="ah-arrow">▼</span></div><div class="accordion-body">
+<p style="font-size:13px;color:#555;margin-bottom:8px"><span class="task-num">任务一</span><b>AI能力底座</b>：统一入口+规范+知识库打地基，一键安装AI客户端、四层规范体系、CodeGraph+Onyx知识库。</p>
+<p style="font-size:13px;color:#555;margin-bottom:8px"><span class="task-num">任务二</span><b>AI聚合网关</b>：模型统一调度+Token全生命周期管理，实现数据沉淀与指标迭代。</p>
+<p style="font-size:13px;color:#555;margin-bottom:8px"><span class="task-num">任务三</span><b>Agent开发平台</b>：5分钟构建运行一个Agent，安全调用内部系统。</p>
+<p style="font-size:13px;color:#555;margin-bottom:8px"><span class="task-num">任务四</span><b>AI能力门户</b>：SkillHub市场、Prompt中心、AI案例库、社区运营机制，建社区Skill/Prompt/案例共享与繁荣。</p>
+<p style="font-size:13px;color:#555"><span class="task-num">任务五</span><b>每季度阶段性回顾</b>：看目标、找差距、定问题的会议机制。</p>
+</div></div>
+</div></div>
+<div class="accordion"><div class="accordion-header"><span class="ah-icon"><span class="phase-tag p2">阶段二</span></span><span class="ah-title">AI 深化期 —— AI 全面嵌入业务和管理流，AI原生化成效显著可见</span><span class="ah-arrow">▼</span></div><div class="accordion-body">
+<p style="font-size:13px;color:#555;margin-bottom:14px">核心提升：从"用上AI"→"用深AI"，从"场景试点"→"全量重构"，从"个人经验"→"公司级能力沉淀"，从"单点提效"→"规模化价值产出"。</p>
+<table><tr><th>层级</th><th>从……</th><th>提升为……</th></tr>
+<tr><td>战略层</td><td>形成公司级规划</td><td><b>年度资源配置和价值牵引</b>：把规划转化为年度资源配置、重点场景优先级和价值目标。</td></tr>
+<tr><td>业务层</td><td>若干场景探索</td><td><b>核心业务场景端到端重构</b>：重点不再是"某个环节用了AI"，而是AI带来了什么可量化的价值评估。</td></tr>
+<tr><td>管理层</td><td>AI化基础改造</td><td><b>AI原生管理机制成型</b>：推动岗位转型融合和数字员工管理；把AI应用成效、能力沉淀和复用贡献全面纳入评价。</td></tr>
+<tr><td>决策流程层</td><td>流程局部接入AI</td><td><b>核心流程AI化重构</b>：推动流程从"人工推动、节点审批"转向"AI辅助运行、人负责关键判断"。</td></tr>
+<tr><td>AI底座层</td><td>工具入口和基础建设</td><td><b>公司级AI公共底座</b>：从"每个部门各自尝试AI"转向"公司统一沉淀、统一调用、统一治理"。</td></tr></table>
+</div></div>
+<div class="accordion"><div class="accordion-header"><span class="ah-icon"><span class="phase-tag p3">阶段三</span></span><span class="ah-title">AI 原生期 —— AI 成为组织核心能力，形成持续自进化的 AI 原生竞争力</span><span class="ah-arrow">▼</span></div><div class="accordion-body">
+<p style="font-size:13px;color:#555;line-height:1.8">AI自行完成进化。从"用上AI"到"用深AI"，从"场景试点"到"全量重构"，从"个人经验"到"公司级能力沉淀"，从"单点提效"到"规模化价值产出"。AI不再是辅助工具，而是组织运行的基础设施和核心能力。</p>
+</div></div>
 </div></div>
 <div class="lightbox" id="lb"><span class="lb-close">&times;</span><img src="" alt="" id="lb-img"></div>
 <div class="footer-bar"><div class="container"><p class="fb">遇到问题先思考 <em>AI 能否参与解决</em></p><p style="margin-top:8px;opacity:.7;font-size:13px">源于 AI · 拥有 AI · 应用 AI · 开放 AI &nbsp;|&nbsp; 敢想 · 会问 · 善学</p></div></div>
 <script>
-document.querySelectorAll('.accordion-header').forEach(h=>{h.addEventListener('click',()=>{const acc=h.parentElement;acc.classList.toggle('open')})});
-const sections=document.querySelectorAll('.sec[id]'),navLinks=document.querySelectorAll('.nav a');
-new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){navLinks.forEach(a=>a.classList.remove('active'));const l=document.querySelector(`.nav a[href="#${e.target.id}"]`);if(l)l.classList.add('active')}})},{threshold:0.3}).observe.bind(null);
-sections.forEach(s=>new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){navLinks.forEach(a=>a.classList.remove('active'));const l=document.querySelector(`.nav a[href="#${e.target.id}"]`);if(l)l.classList.add('active')}})},{threshold:0.3}).observe(s));
-const lb=document.getElementById('lb'),lbImg=document.getElementById('lb-img');
-document.querySelectorAll('.lbox').forEach(img=>{img.addEventListener('click',()=>{lbImg.src=img.src;lb.classList.add('show')})});
+document.querySelectorAll('.accordion-header').forEach(h=>{h.addEventListener('click',()=>{h.parentElement.classList.toggle('open')})});
+const secs=document.querySelectorAll('.sec[id]'),navs=document.querySelectorAll('.nav a');
+const ob=new IntersectionObserver(e=>{e.forEach(x=>{if(x.isIntersecting){navs.forEach(a=>a.classList.remove('active'));const l=document.querySelector('.nav a[href="#'+x.target.id+'"]');if(l)l.classList.add('active')}})},{threshold:0.3});
+secs.forEach(s=>ob.observe(s));
+const lb=document.getElementById('lb'),li=document.getElementById('lb-img');
+document.querySelectorAll('.lbox').forEach(i=>{i.addEventListener('click',()=>{li.src=i.src;lb.classList.add('show')})});
 lb.addEventListener('click',()=>lb.classList.remove('show'));
 </script>
 </body>
