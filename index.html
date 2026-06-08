@@ -226,13 +226,13 @@ tr:last-child td{border-bottom:none}
 
     <h5 style="margin:18px 0 10px;">📝 AI 浓度自证</h5>
     <div class="conc3">
-      <div class="conc ch"><div class="cn">172</div><div class="cl">高质量案例 10.4%</div>
-<div style="text-align:center;margin:16px 0;"><img src="https://raw.githubusercontent.com/Shinesong777/ai-org-poster/main/p7_img0.png
-<div style="text-align:center;margin:16px 0;"><img src="https://raw.githubusercontent.com/Shinesong777/ai-org-poster/main/p7_img1.png" style="max-width:100%;border-radius:8px;border:1px solid #e5e7eb;" alt="AI浓度图示2"></div>
-" style="max-width:100%;border-radius:8px;border:1px solid #e5e7eb;" alt="AI浓度图示1"></div>
-</div>
+      <div class="conc ch"><div class="cn">172</div><div class="cl">高质量案例 10.4%</div></div>
       <div class="conc cm"><div class="cn">812</div><div class="cl">有效案例 49.3%</div></div>
       <div class="conc clo"><div class="cn">665</div><div class="cl">无效案例 40.3%</div></div>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:16px;">
+      <div style="text-align:center;"><img src="https://raw.githubusercontent.com/Shinesong777/ai-org-poster/main/p7_img0.png" style="max-width:100%;border-radius:8px;border:1px solid #e5e7eb;" alt="AI浓度图示1"></div>
+      <div style="text-align:center;"><img src="https://raw.githubusercontent.com/Shinesong777/ai-org-poster/main/p7_img1.png" style="max-width:100%;border-radius:8px;border:1px solid #e5e7eb;" alt="AI浓度图示2"></div>
     </div>
 
     <h5 style="margin:18px 0 8px;">🏅 AI 人才能力分级（A1→A4）</h5>
@@ -407,7 +407,6 @@ document.querySelectorAll('.accordion-header').forEach(h=>{
   h.addEventListener('click',()=>{
     const acc = h.parentElement;
     acc.classList.toggle('open');
-    // Close nested accordions when parent closes
     if(!acc.classList.contains('open')){
       acc.querySelectorAll('.accordion.open').forEach(a=>a.classList.remove('open'));
     }
